@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public bool hasPowerup;
     private float poweupStrength = 15.0f;
     public GameObject powerupIndicatior;
+    public GameObject misslePrefab;
+    public GameObject temporatyMissile;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,16 @@ public class PlayerController : MonoBehaviour
         powerupIndicatior.transform.position = transform.position + new Vector3(0, -0.5f, 0);
         forwardInput = Input.GetAxis("Vertical");
         playerRb.AddForce(focalPoint.transform.forward * speed * forwardInput);
+       // if (Input.GetKeyDown(KeyCode.X))
+        {
+           // var boxes = FindGameObjectsWithTag("Powerup");
+         //  for(int 1 = 0; 1 < enemies.Length; 1++)
+            {
+                //temporatryMissile = Instantiate(misslePrefab, transform.position + Vector3.up, Quaternion.identity);
+               // temporaryMissile = GetComponent<HomingMissile>().LaunchMissiles(enemies)
+            }
+        }
+        
     }
     private void OnTriggerEnter(Collider other)
     {
